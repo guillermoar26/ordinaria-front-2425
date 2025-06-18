@@ -4,22 +4,24 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
-import * as $api_joke from "./routes/api/joke.ts";
-import * as $greet_name_ from "./routes/greet/[name].tsx";
+import * as $_layout from "./routes/_layout.tsx";
+import * as $character_id_ from "./routes/character/[id].tsx";
+import * as $favorites_index from "./routes/favorites/index.tsx";
 import * as $index from "./routes/index.tsx";
-import * as $Counter from "./islands/Counter.tsx";
+import * as $Fav from "./islands/Fav.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
-    "./routes/api/joke.ts": $api_joke,
-    "./routes/greet/[name].tsx": $greet_name_,
+    "./routes/_layout.tsx": $_layout,
+    "./routes/character/[id].tsx": $character_id_,
+    "./routes/favorites/index.tsx": $favorites_index,
     "./routes/index.tsx": $index,
   },
   islands: {
-    "./islands/Counter.tsx": $Counter,
+    "./islands/Fav.tsx": $Fav,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
