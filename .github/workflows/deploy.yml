@@ -29,7 +29,7 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "guillermoar-ordinaria-f-11"
+          project: "guillermoar-ordinaria-f-85"
           entrypoint: "main.ts"
           root: "."
           
